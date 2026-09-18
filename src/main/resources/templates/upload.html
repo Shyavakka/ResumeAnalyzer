@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Resume Analyzer</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="container">
+    <h1>AI Resume Analyzer</h1>
+    <p class="subtitle">Upload your resume as a PDF and get structured, AI-generated feedback.</p>
+
+    <div th:if="${errorMessage}" class="error-box" th:text="${errorMessage}"></div>
+
+    <form action="#" th:action="@{/analyze}" method="post" enctype="multipart/form-data" class="upload-form">
+        <label for="resume">Choose your resume (PDF only)</label>
+        <input type="file" id="resume" name="resume" accept="application/pdf" required>
+        <button type="submit">Analyze Resume</button>
+    </form>
+</div>
+</body>
+</html>

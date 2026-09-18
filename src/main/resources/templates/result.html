@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume Analysis Result</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="container">
+    <h1>Analysis for <span th:text="${fileName}"></span></h1>
+
+    <div class="score-box">
+        <span class="score-number" th:text="${result.score}"></span><span class="score-suffix">/100</span>
+    </div>
+
+    <h2>Profile Summary</h2>
+    <p th:text="${result.profileSummary}"></p>
+
+    <h2>Key Strengths</h2>
+    <ul>
+        <li th:each="item : ${result.keyStrengths}" th:text="${item}"></li>
+    </ul>
+
+    <h2>Areas for Improvement</h2>
+    <ul>
+        <li th:each="item : ${result.areasForImprovement}" th:text="${item}"></li>
+    </ul>
+
+    <h2>Missing Skills or Sections</h2>
+    <ul>
+        <li th:each="item : ${result.missingSkillsOrSections}" th:text="${item}"></li>
+    </ul>
+
+    <h2>Suggestions to Improve</h2>
+    <ul>
+        <li th:each="item : ${result.suggestions}" th:text="${item}"></li>
+    </ul>
+
+    <a href="/" class="back-link">&larr; Analyze another resume</a>
+</div>
+</body>
+</html>
