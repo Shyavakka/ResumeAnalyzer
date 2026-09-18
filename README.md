@@ -10,7 +10,7 @@ Built for the NavaDhiti fresher assignment.
 
 - Java 17, Spring Boot 3.2 (Web + Thymeleaf)
 - Apache PDFBox for PDF text extraction
-- Google Gemini API for the AI analysis (model: `gemini-1.5-flash`, free tier)
+- Google Gemini API for the AI analysis (model: `gemini-3.1-flash-lite`, free tier)
 
 ## How it works
 
@@ -49,7 +49,7 @@ $env:GEMINI_API_KEY="your-key-here"
 mvn spring-boot:run
 ```
 
-**4. Open** http://localhost:8080 and upload a PDF resume.
+**4. Open** http://localhost:8085 and upload a PDF resume.
 
 ## Swapping the AI provider
 
@@ -73,8 +73,6 @@ For a quick, free deployment so you have a live link to submit:
 - **Railway.app** works the same way and also auto-detects Spring Boot.
 
 ## Submitting
-
-You need to send NavaDhiti:
 1. Your own GitHub repo link (push this code there first).
 2. The demo/deployment link from Render or Railway.
 
